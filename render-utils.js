@@ -8,11 +8,11 @@ export function renderPastTrial(trial) {
 
   // add some text content
     container.classList.add('past-trial');
-    tAffairsEl.textContent = trial.question;
-    tChoiceA.textContent = trial.optionATitle;
-    tChoiceB.textContent = trial.optionBTitle;
-    tVotesA.textContent = trial.optionAVotes;
-    tVotesB.textContent = trial.optionBVotes;
+    tAffairsEl.textContent = trial.affairs;
+    tChoiceA.textContent = trial.ChoiceA;
+    tChoiceB.textContent = trial.ChoiceB;
+    tVotesA.textContent = trial.VotesA;
+    tVotesB.textContent = trial.VotesB;
 
   // and append
     container.append(tAffairsEl, tChoiceA, tChoiceB, tVotesA, tVotesB);
