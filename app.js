@@ -13,7 +13,6 @@ const affairsLabel = document.querySelector('.affairs');
 const choiceALabel = document.querySelector('#choice-a-name');
 const choiceBLabel = document.querySelector('#choice-b-name');
 
-const affairsEl = document.querySelector('#');
 const currentTrialEl = document.querySelector('#current-trial-container');
 const pastTrialEl = document.querySelector('#past-trial-container');
 
@@ -72,10 +71,32 @@ nameFormButton.addEventListener('click', () => {
 
 });
 
+completeButton.addEventListener('click', () => {
+    const currentTrial = {
+        affairs:affairs,
+        choiceA:choiceA,
+        choiceB:choiceB,
+        votesA:votesA,
+        votesB:votesB
+    };
+
+    pastTrialsArray.push(currentTrial);
+
+    resetTrial();
+});
+
 function resetTrial() {
     affairs = '';
     choiceA = '';
     choiceB = '';
     votesA = 0;
     votesB = 0;
+}
+
+function displayAllTrials() {
+    pastTrialEl.textContent = '';
+
+    for (let pastTrial of pastTrialsArray) {
+		const
+    }
 }
