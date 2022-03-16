@@ -1,8 +1,8 @@
 export function renderPastTrial(trial) {
     const container = document.createElement('div');
-    const tAffairsEl = document.createElement('p');
-    const tChoiceA = document.createElement('p');
-    const tChoiceB = document.createElement('p');
+    const tAffairsEl = document.createElementsByName('p');
+    const tChoiceA = document.createElementsByName('p');
+    const tChoiceB = document.createElementsByName('p');
     const tVotesA = document.createElement('p');
     const tVotesB = document.createElement('p');
 
