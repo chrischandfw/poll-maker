@@ -94,6 +94,11 @@ function resetTrial() {
     votesB = 0;
 }
 
+function displayCurrentTrial() {
+    currentTrialEl.textContent = '';
+
+}
+
 function displayTrials() {
     pastTrialEl.textContent = '';
 
