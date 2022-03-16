@@ -1,4 +1,4 @@
-import { renderPastTrial } from './render-utils';
+import { renderPastTrial } from './render-utils.js';
 
 const choiceAAddButton = document.querySelector('#choice-a-add-button');
 const choiceBAddButton = document.querySelector('#choice-b-add-button');
@@ -15,7 +15,7 @@ const choiceALabel = document.querySelector('#choice-a-name');
 const choiceBLabel = document.querySelector('#choice-b-name');
 
 const currentTrialEl = document.querySelector('#current-trial-container');
-const pastTrialEl = document.querySelector('#past-trial-container');
+const pastTrialEl = document.querySelector('#past-trials-container');
 
 // let state
 let affairs = '';
@@ -28,27 +28,31 @@ const pastTrialsArray = [];
 
 // set event listeners 
 choiceAAddButton.addEventListener('click', () => {
-    choiceA++;
+    votesA++;
 
-    resetTrial();
+    displayCurrentTrial();
+
 });
 
 choiceBAddButton.addEventListener('click', () => {
-    choiceB++;
+    votesB++;
 
-    resetTrial();
+    displayCurrentTrial();
+
 });
 
 choiceASubtractButton.addEventListener('click', () =>{
-    choiceA--;
+    votesA--;
 
-    resetTrial();
+    displayCurrentTrial();
+
 });
 
 choiceBSubtractButton.addEventListener('click', () =>{
-    choiceB--;
+    votesB--;
 
-    resetTrial();
+    displayCurrentTrial();
+
 });
 
 nameFormButton.addEventListener('click', () => {
@@ -69,8 +73,6 @@ nameFormButton.addEventListener('click', () => {
     choiceBLabel.value = '';
 
     displayCurrentTrial();
-
-    resetTrial();
 
 });
 
@@ -107,7 +109,17 @@ function displayCurrentTrial() {
     choiceALabel.textContent = choiceA;
     choiceBLabel.textContent = choiceB;
 
-    currentTrialEl.append();
+    const trial = {
+        affairs: affairs,
+        choiceA: choiceA,
+        choiceB: choiceB,
+        votesA: votesA,
+        votesB: votesB
+    };  
+    const container = renderPastTrial(trial);
+    currentTrialEl.append(container);
+
+    //currentTrialEl.append();
 
 }
 
