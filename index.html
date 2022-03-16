@@ -20,46 +20,67 @@
     </header>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
             <h2>
-                Welcome to Alchemy Bootstrap!
+                TRIBUNALS
             </h2>
+            <div class="left">
+                <h2>Trial Application</h2>
+                <div id="current-trial-container">
 
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
+                </div>
+
+
+                <div class="form-and-buttons">
+                    <div class="name-form"> 
+						<label class="affairs">Affairs <input name="question"/>
+						</label>
+						<br>
+                        <label>
+                            Choice A
+                            <input name="choice-a" />
+                        </label>
+				
+                        <label>
+                            Choice B
+                            <input name="choice-b" />
+                        </label>
+                        <button id="name-form-button">Start Trial</button>
+					</div>
+
+                            <div class="left-buttons">
+                                <h3 id="choice-a-name">Choice A</h3>
+                                <button id="choice-a-add-button">
+                                    Upvote
+                                </button>
+                                <button id="choice-a-subtract-button" class="undo">
+                                    Downvote
+                                </button>
+                            </div>
+
+                            <div class="right-buttons">
+                                <h3 id="choice-b-name">Choice B</h3>
+                                <button id="choice-b-add-button">
+                                    Upvote
+                                </button> 
+                                <button id="choice-b-subtract-button" class="undo">
+                                    Downvote
+                                </button>    
+                            </div>
+
+							<div class="bottom-buttons">
+								<button id="complete-vote-button">
+									Complete Trial
+								</button>    
+							</div>
+
+							<div class="right">
+							<div>
+								<h2>Tribunal History</h2>
+							</div>
+								<div id="past-trials-container">
+								</div>
+								</div>
+
 
         </section>
     </main>

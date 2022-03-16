@@ -15,6 +15,18 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 1) **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
 1) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
 
+![wireframe](./assets/poll-wireframe.png "wireframe for poll maker app")
+
+## HTML Setup
+- 6 buttons
+	-2 buttons for adding increments using event listeners
+	-2 buttons to decrement vote counts
+	- 1 button to submit poll with 3 inputs: Question, option1, and option2.
+	- 1 button to close poll.
+
+- Current poll section to hold question and 2 options
+- Empty div to hold history of poll.
+
 Additional considerations:
 - Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
 - Consider your data model. 
