@@ -5,11 +5,11 @@ const choiceBAddButton = document.querySelector('#choice-b-add-button');
 const choiceASubtractButton = document.querySelector('#choice-a-subtract-button'); 
 const choiceBSubtractButton = document.querySelector('#choice-b-subtract-button');
 
-const form = document.querySelector('form');
 const nameFormButton = document.querySelector('#name-form-button');
 
 const completeButton = document.querySelector('#complete-vote-button');
 
+const affairsLabel = document.querySelector('.affairs');
 const choiceALabel = document.querySelector('#choice-a-name');
 const choiceBLabel = document.querySelector('#choice-b-name');
 
@@ -51,10 +51,31 @@ choiceBSubtractButton.addEventListener('click', () =>{
     resetTrial();
 });
 
+nameFormButton.addEventListener('click', () => {
+    let affairsInput = document.getElementsByName('question') [0];
+    let choiceAInput = document.getElementsByName('choice-a') [0];
+    let choiceBInput = document.getElementsByName('choice-b') [0];
+
+    affairs = affairsInput.value;
+    choiceA = choiceAInput.value;
+    choiceB = choiceBInput.value; 
+
+    affairsInput = ('');
+    choiceAInput = ('');
+    choiceBInput = ('');
+
+    affairsLabel.value = '';
+    choiceALabel.value = '';
+    choiceBLabel.value = '';
+
+    resetTrial();
+
+});
+
 function resetTrial() {
     affairs = '';
     choiceA = '';
     choiceB = '';
-    votesA = '';
-    votesB = '';
+    votesA = 0;
+    votesB = 0;
 }
