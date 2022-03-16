@@ -13,10 +13,20 @@ const completeButton = document.querySelector('#complete-vote-button');
 const choiceALabel = document.querySelector('#choice-a-name');
 const choiceBLabel = document.querySelector('#choice-b-name');
 
+const affairsEl = document.querySelector('#');
 const currentTrialEl = document.querySelector('#current-trial-container');
 const pastTrialEl = document.querySelector('#past-trial-container');
 
 // let state
+let affairs = '';
+let choiceA = '';
+let choiceB = '';
+let votesA = 0;
+let votesB = 0;
+
+const pastTrialsArray = [];
+
+
 
 // set event listeners 
   // get user input
