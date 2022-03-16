@@ -26,9 +26,35 @@ let votesB = 0;
 
 const pastTrialsArray = [];
 
-
-
 // set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+choiceAAddButton.addEventListener('click', () => {
+    choiceA++;
+
+    resetTrial();
+});
+
+choiceBAddButton.addEventListener('click', () => {
+    choiceB++;
+
+    resetTrial();
+});
+
+choiceASubtractButton.addEventListener('click', () =>{
+    choiceA--;
+
+    resetTrial();
+});
+
+choiceBSubtractButton.addEventListener('click', () =>{
+    choiceB--;
+
+    resetTrial();
+});
+
+function resetTrial() {
+    affairs = '';
+    choiceA = '';
+    choiceB = '';
+    votesA = '';
+    votesB = '';
+}
