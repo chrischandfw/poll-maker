@@ -68,6 +68,8 @@ nameFormButton.addEventListener('click', () => {
     choiceALabel.value = '';
     choiceBLabel.value = '';
 
+    displayCurrentTrial();
+
     resetTrial();
 
 });
@@ -83,7 +85,11 @@ completeButton.addEventListener('click', () => {
 
     pastTrialsArray.push(currentTrial);
 
+    displayCurrentTrial();
+
     resetTrial();
+
+    displayTrials();
 });
 
 function resetTrial() {
@@ -97,12 +103,18 @@ function resetTrial() {
 function displayCurrentTrial() {
     currentTrialEl.textContent = '';
 
+    affairsLabel.textContent = affairs;
+    choiceALabel.textContent = choiceA;
+    choiceBLabel.textContent = choiceB;
+
+    currentTrialEl.append();
+
 }
 
 function displayTrials() {
     pastTrialEl.textContent = '';
 
-    for (let pastTrial of pastTrialsArray) {
+    for (let trial of pastTrialsArray) {
         const container = renderPastTrial(trial);
         pastTrialEl.append(container);
     }
