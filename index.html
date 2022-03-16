@@ -20,18 +20,18 @@
     </header>
     <main>
         <section class="main-section">
-            <h2>
+            /*<h2>
                 TRIBUNALS
             </h2>
             <div class="left">
-                <h2>Current Trial</h2>
-                <div id="current-game-container">
-
+                <h2>Trial Application</h2>
+                <div id="current-trial-container">
                 </div>
 
 
                 <div class="form-and-buttons">
                     <div class="name-form"> 
+						<form>
 						<label class="affairs">Affairs <input name="question"/>
 						</label>
 						<br>
@@ -43,8 +43,9 @@
                             Choice B
                             <input name="choice-b" />
                         </label>
-                        <button id="name-form-button">Submit Choices</button>
-                    </div>
+                        <button id="name-form-button">Start Trial</button>
+                    </form>
+					</div>
 
                             <div class="left-buttons">
                                 <h3 id="choice-a-name">Choice A</h3>
@@ -66,6 +67,19 @@
                                 </button>    
                             </div>
 
+							<div class="bottom-buttons">
+								<button id="complete-vote-button">
+									Complete Trial
+								</button>    
+							</div>
+
+							<div class="right">
+							<div>
+								<h2>Tribunal History</h2>
+							</div>
+								<div id="past-trials-container">
+								</div>
+								</div>
 
 
         </section>
