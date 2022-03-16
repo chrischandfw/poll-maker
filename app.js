@@ -1,4 +1,5 @@
-// import functions and grab DOM elements
+import { renderPastTrial } from './render-utils';
+
 const choiceAAddButton = document.querySelector('#choice-a-add-button');
 const choiceBAddButton = document.querySelector('#choice-b-add-button');
 
@@ -73,11 +74,11 @@ nameFormButton.addEventListener('click', () => {
 
 completeButton.addEventListener('click', () => {
     const currentTrial = {
-        affairs:affairs,
-        choiceA:choiceA,
-        choiceB:choiceB,
-        votesA:votesA,
-        votesB:votesB
+        affairs: affairs,
+        choiceA: choiceA,
+        choiceB: choiceB,
+        votesA: votesA,
+        votesB: votesB
     };
 
     pastTrialsArray.push(currentTrial);
@@ -93,10 +94,11 @@ function resetTrial() {
     votesB = 0;
 }
 
-function displayAllTrials() {
+function displayTrials() {
     pastTrialEl.textContent = '';
 
     for (let pastTrial of pastTrialsArray) {
-		const
+        const container = renderPastTrial(trial);
+        pastTrialEl.append(container);
     }
 }
